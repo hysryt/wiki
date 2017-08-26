@@ -63,6 +63,9 @@ RewriteRule 〜     // [1]を満たす時のみ実行される</code></pre>
           <pre class="code"><code>RewriteCond 〜     // [1]
 RewriteRule 〜     // [1]を満たす時のみ実行される
 RewriteRule 〜     // 常に実行される</code></pre>
+          <pre class="code"><code>RewriteCond 〜        // [1]
+RewriteRule 〜 [C]    // [1]を満たす時のみ実行される
+RewriteRule 〜        // [1]を満たす時のみ上の行を実行した後実行される</code></pre>
         </div>
       </section>
     </article>
