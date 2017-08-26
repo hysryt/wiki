@@ -7,15 +7,62 @@
     <article class="article">
       <div class="heading">
         <h1 class="heading__title">mod_rewrite</h1>
+        <p class="heading__lead">URLの置換を行う</p>
       </div>
       <section class="section">
         <div class="section__heading">
           <h1 class="section__heading__title">RewriteCond</h1>
         </div>
+        <div class="section__content">
+          <pre class="code"><code>RewriteCond arg1 arg2 [arg3]</code></pre>
+          <table>
+            <tr>
+              <th>arg1</th>
+              <td>対象文字列（%{変数名}）</td>
+            </tr>
+            <tr>
+              <th>arg2</th>
+              <td>条件パターン（正規表現、オプション）</td>
+            </tr>
+            <tr>
+              <th>arg3</th>
+              <td>フラグ（[OR], [NC], [OR,NC]）</td>
+            </tr>
+          </table>
+        </div>
       </section>
       <section class="section">
         <div class="section__heading">
           <h1 class="section__heading__title">RewriteRule</h1>
+        </div>
+        <div class="section__content">
+          <pre class="code"><code>RewriteRule arg1 arg2 [arg3]</code></pre>
+          <table>
+            <tr>
+              <th>arg1</th>
+              <td>置換対象（正規表現）</td>
+            </tr>
+            <tr>
+              <th>arg2</th>
+              <td>置換後文字列</td>
+            </tr>
+            <tr>
+              <th>arg3</th>
+              <td>フラグ（[L], [C]など）</td>
+            </tr>
+          </table>
+        </div>
+      </section>
+      <section class="section">
+        <div class="section__heading">
+          <h1 class="section__heading__title">基本</h1>
+        </div>
+        <div class="section__content">
+          <pre class="code"><code>RewriteCond 〜     // [1]
+RewriteRule 〜     // [1]を満たす時のみ実行される</code></pre>
+          <pre class="code"><code>RewriteCond 〜     // [1]
+RewriteRule 〜     // [1]を満たす時のみ実行される
+RewriteRule 〜     // 常に実行される</code></pre>
         </div>
       </section>
     </article>
