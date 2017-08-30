@@ -1,17 +1,116 @@
-<article>
-  <h1>Composer</h1>
-  <section>
-    取得可能なパッケージの詳細を表示<br>
-    composer -vvv show -a [パッケージ名]<br>
-    <br>
-    パッケージの検索<br>
-    composer search [パッケージ名]<br>
-  </section>
-  <section>
-    composer.json<br>
-    <br>
-    composer.lock<br>
-    バージョンの固定<br>
-    composer install した時点でのバージョン情報を保存しておく
-    次回 composer install した場合、このファイルに記録されているバージョンをインストールする
-</article>
+<html>
+  <head>
+    <meta charset="utf8">
+    <meta http-equiv="content-language" content="ja">
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+  <body>
+    <article class="article">
+      <div class="article__heading">
+        <h1 class="article__heading__title">Composer<span class="article__heading__lastupdate">最終更新日：2017/08/30</span></h1>
+      </div>
+      <section class="section">
+        <div class="section__heading">
+          <h1 class="section__heading__title">Homebrewからインストール</h1>
+        </div>
+        <div class="section__content">
+          <div class="code">
+            <pre class="code__content"><code>> brew install composer</code></pre>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="section__heading">
+          <h1 class="section__heading__title">バージョン確認</h1>
+        </div>
+        <div class="section__content">
+          <div class="code">
+            <pre class="code__content"><code>> composer -V
+Composer version 1.5.1 2017-08-09 16:07:22</code></pre>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="section__heading">
+          <h1 class="section__heading__title">取得可能なパッケージの詳細を表示</h1>
+        </div>
+        <div class="section__content">
+          <div class="code">
+            <pre class="code__content"><code>> composer -vvv show -a [パッケージ名]</code></pre>
+          </div>
+          <p>
+            インターネットから取得するため少し時間がかかる。<br>
+            -vvv をつけると取得中の進捗状況も見れる。
+          </p>
+          <div class="code">
+            <h2 class="code__title">laravel/laravelの情報を取得</h2>
+            <pre class="code__content"><code>> composer show -a laravel/laravel
+No composer.json found in the current directory, showing available packages from packagist.org
+name     : laravel/laravel
+descrip. : The Laravel Framework.
+keywords : framework, laravel
+versions : dev-master, 5.4.x-dev, v5.4.30, v5.4.23, v5.4.21, v5.4.19, v5.4.16, v5.4.15, v5.4.9, v5.4.3, v5.4.0, 5.3.x-dev, v5.3.30, v5.3.16, v5.3.10, v5.3.0, 5.2.x-dev, v5.2.31, v5.2.29, v5.2.27, v5.2.24, v5.2.23, v5.2.15, v5.2.0, 5.1.x-dev, v5.1.33, v5.1.11, v5.1.4, v5.1.3, v5.1.1, v5.1.0, 5.0.x-dev, v5.0.22, v5.0.16, v5.0.1, v5.0.0, v4.2.11, v4.2.0, v4.1.27, v4.1.18, v4.1.0, v4.0.9, v4.0.8, v4.0.7, v4.0.6, v4.0.5, v4.0.4, v4.0.0, v4.0.0-BETA4, v4.0.0-BETA3, dev-develop
+type     : project
+license  : MIT License (MIT) (OSI approved) https://spdx.org/licenses/MIT.html#licenseText
+source   : [git] https://github.com/laravel/laravel.git 26eed641ebf08ea417d7dc589f61f2dbc5934706
+dist     : [zip] https://api.github.com/repos/laravel/laravel/zipball/26eed641ebf08ea417d7dc589f61f2dbc5934706 26eed641ebf08ea417d7dc589f61f2dbc5934706
+names    : laravel/laravel
+
+autoload
+classmap
+database/seeds, database/factories
+psr-4
+App\ => app/
+
+requires
+php >=5.6.4
+laravel/framework 5.4.*
+laravel/tinker ~1.0
+
+requires (dev)
+fzaninotto/faker ~1.4
+mockery/mockery 0.9.*
+phpunit/phpunit ~5.7</code></pre>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="section__heading">
+          <h1 class="section__heading__title">パッケージの検索</h1>
+        </div>
+        <div class="section__content">
+          <div class="code">
+            <pre class="code__content"><code>> composer search [パッケージ名]</code></pre>
+          </div>
+          <div class="code">
+            <h2 class="code__title">larabelで検索</h2>
+            <pre class="code__content"><code>> composer search laravel
+laravel/laravel The Laravel Framework.
+backup-manager/laravel Database backup manager seamlessly integrated with Laravel 4 or 5 with user-definable procedures and support for S3, Dropbox, FTP, SFTP, and more.
+nexmo/laravel Laravel Package for Nexmo's PHP Client
+reliese/laravel Reliese Components for Laravel Framework code generation.
+contentful/laravel Integrates the Contentful PHP SDK with Laravel.
+php-tmdb/laravel Laravel Package for TMDB ( The Movie Database ) API. Provides easy access to the wtfzdotnet/php-tmdb-api library.
+parsedown/laravel Official Laravel Wrapper of Parsedown.
+typerocket/laravel Makes form building and model binding a breeze.
+pipeflow/laravel Pipeflow for the Laravel framework.
+lucid-arch/laravel The Laravel Framework.
+pointblue/laravel Larvel components and code used for Point Blue Applications
+kavenegar/laravel laravel 4 and 5 kavenegar integration
+laravel-ja/laravel The Laravel Framework.
+linfo/laravel This is a Laravel 5 Wrapper for the linfo package from jrgp
+alshahawi/laravel The Laravel Framework.</code></pre>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="section__heading">
+          <h1 class="section__heading__title">composer.lock</h1>
+        </div>
+        <div class="section__content">
+          <p>バージョンを固定しておくためのファイル。<br>composer install した時点でのバージョン情報を保存しておく。<br>次回 composer install した場合、このファイルに記録されているバージョンをインストールする。</p>
+        </div>
+      </section>
+    </article>
+  </body>
+</html>

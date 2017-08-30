@@ -42,6 +42,12 @@ body {
   padding: 5px;
 }
 
+.article__heading__lastupdate {
+    font-weight: normal;
+    margin-left: 10px;
+    font-size: 10px;
+}
+
 .article__heading__lead {
   font-size: 11px;
   line-height: 1.5;
@@ -69,6 +75,11 @@ body {
   border-bottom: solid 2px #444;
 }
 
+.section__content > p {
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
 .code {
   margin-bottom: 10px;
 }
@@ -86,6 +97,7 @@ body {
   border-radius: 2px;
   font-family: Osaka-Mono, monospace;
   line-height: 1.4;
+  overflow-x: scroll;
 }
 
 table {
