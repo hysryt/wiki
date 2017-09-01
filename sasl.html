@@ -2,6 +2,8 @@
 <html>
   <head>
     <meta charset="utf8">
+    <meta http-equiv="content-language" content="ja">
+    <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="css/style.css">
     <title>SASL</title>
   </head>
@@ -13,9 +15,45 @@
           <em>S</em>imple <em>A</em>uthentication and <em>S</em>ecurity <em>L</em>ayer<br>
           アプリケーションプロトコル（SMTP、POPなど）から、認証機構を分離したもの<br>
           RFC4422 / RFC4505 / RFC4752<br>
-          PostfixではSMTP認証にSASLを使用している（Cyrus-SASL）<br>
+          SMTP-Auth でも採用されている<br>
         </p>
       </div>
+      <section class="section">
+        <div class="section__heading">
+          <h1 class="section__heading__title">認証方式</h1>
+        </div>
+        <div class="section__content">
+          <table>
+            <tr>
+              <th>PLAIN</th>
+              <td>
+                平文でID、パスワードを送信する。<br>
+                TLSなど他の暗号方式と合わせて使うべき。
+              </td>
+            </tr>
+            <tr>
+              <th>LOGIN</th>
+              <td>
+                平文でID、パスワードを送信する。<br>
+                明確な定義がないらしい。
+              </td>
+            </tr>
+            <tr>
+              <th>CRAM-MD5</th>
+              <td>
+                チャレンジレスポンス方式による認証<br>
+                MD5でハッシュ化する
+              </td>
+            </tr>
+            <tr>
+              <th>DIGEST-MD5</th>
+              <td>
+                CRAM-MD5を強化したもの
+              </td>
+            </tr>
+          </table>
+        </div>
+      </section>
       <section class="section">
         <div class="section__heading">
           <h1 class="section__heading__title">参考リンク</h1>
@@ -23,7 +61,7 @@
         <div class="section__content">
           <ul class="linklist">
             <li class="linklist__item"><a href="https://ja.wikipedia.org/wiki/Simple_Authentication_and_Security_Layer">https://ja.wikipedia.org/wiki/Simple_Authentication_and_Security_Layer</a></li>
-            <li class="linklist__item"><a href="https://ja.wikipedia.org/wiki/Simple_Authentication_and_Security_Layer">https://ja.wikipedia.org/wiki/Simple_Authentication_and_Security_Layer</a></li>
+            <li class="linklist__item"><a href="http://www.wdic.org/w/WDIC/SASL">http://www.wdic.org/w/WDIC/SASL</a></li>
           </ul>
         </div>
       </section>

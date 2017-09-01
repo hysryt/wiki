@@ -76,6 +76,10 @@ body {
   line-height: 1.4;
 }
 
+.section__content {
+  overflow-x: scroll;
+}
+
 .section__content > p {
   line-height: 1.4;
   margin-bottom: 10px;
@@ -118,10 +122,14 @@ th {
 
 .linklist__item {
   margin-bottom: 5px;
+  position: relative;
+  padding-left: 15px;
 }
 
 .linklist__item::before {
   content: "・";
+  position: absolute;
+  left: 0;
 }
 
 .linklist__item a {
