@@ -13,6 +13,7 @@
           RewriteRule ではURLのパスとファイル名に対する<em>正規表現による</em>条件のみ。<br>
           RewriteCond ではUserAgentやIPアドレスなども条件に含めることができる。<br>
           RewriteRule だけでもURLの置換は行えるが、RewriteCondを合わせて使うことによってより細かい条件の指定ができる。<br>
+          .htaccessファイルを編集した場合はapacheの再起動が必要。<br>
         </p>
       </div>
       <section class="section">
@@ -34,7 +35,11 @@
             </tr>
             <tr>
               <th>arg3</th>
-              <td>フラグ（[OR], [NC], [OR,NC]）</td>
+              <td>
+                フラグ（[OR], [NC], [OR,NC]）<br>
+                -f : ファイルが存在する(!-fで存在しない）<br>
+                -d : ディレクトリが存在する（!-dで存在しない）
+              </td>
             </tr>
           </table>
         </div>
